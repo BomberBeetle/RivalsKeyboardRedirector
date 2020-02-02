@@ -1,5 +1,6 @@
 # Rivals Keyboard Redirector
 Redirects and splits keyboard input into multiple vJoy devices, enabling local play with two keyboards on Rivals of Aether. These are detected as GameCube Controllers by the game.
+You may download the latest build here: https://github.com/BomberBeetle/RivalsKeyboardRedirector/releases
 
 # How to Use
 Firstly, enable however many vJoy devices you may need in the vJoy configuration, one for each keyboard. Keep in mind that GameCube controllers also consume vJoy devices. All of the vJoy devices need to have these features enabled, which by default always are. These are the X, Y, Z, Rx, Ry and Rz Axes and 32 buttons.
