@@ -512,7 +512,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainWindow";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "RoA Keyboard Redirector v0.1 - Alpha Build";
+            this.Text = "RoA Keyboard Redirector v0.2 - Alpha Build";
             this.ResumeLayout(false);
             this.PerformLayout();
 
