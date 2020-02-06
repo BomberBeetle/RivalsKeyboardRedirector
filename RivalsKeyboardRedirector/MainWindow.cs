@@ -52,6 +52,7 @@ namespace RivalsKeyboardRedirector
                 if (!keyboards.ContainsKey(e.KeyPressEvent.DeviceHandle))
                 {
                     keyboards.Add(e.KeyPressEvent.DeviceHandle, new Keyboard(e.KeyPressEvent.DeviceHandle, e.KeyPressEvent.DeviceName));
+                    comboBox1.Items.Add(e.KeyPressEvent.DeviceHandle);
                 }
                 vJoyBox.CheckedChanged -= vJoyBox_CheckedChanged;
                 vJoyBox.Checked = keyboards[e.KeyPressEvent.DeviceHandle].vJoyEnabled;
@@ -61,9 +62,12 @@ namespace RivalsKeyboardRedirector
                 LSAutorunBox.Checked = keyboards[e.KeyPressEvent.DeviceHandle].LSAutoRun;
                 LSAutorunBox.CheckedChanged += LSAutorunBox_CheckedChanged;
 
-                labelCurrentKb.Text = $"Current Keyboard: {e.KeyPressEvent.DeviceHandle.ToString()}";
+                //labelCurrentKb.Text = $"Current Keyboard: {e.KeyPressEvent.DeviceHandle.ToString()}";
                 currentHandle = e.KeyPressEvent.DeviceHandle;
 
+                comboBox1.SelectedItem = currentHandle;
+
+                /*
                 inputBox_A.Text = keyboards[e.KeyPressEvent.DeviceHandle].binds.ContainsKey(ButtonEnum.A) ? keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.A] : "";
                 inputBox_B.Text = keyboards[e.KeyPressEvent.DeviceHandle].binds.ContainsKey(ButtonEnum.B) ? keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.B] : "";
                 inputBox_X.Text = keyboards[e.KeyPressEvent.DeviceHandle].binds.ContainsKey(ButtonEnum.X) ? keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.X] : "";
@@ -72,7 +76,6 @@ namespace RivalsKeyboardRedirector
                 inputBox_R.Text = keyboards[e.KeyPressEvent.DeviceHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.R] : "";
                 inputBox_Z.Text = keyboards[e.KeyPressEvent.DeviceHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.Z] : "";
                 inputBox_START.Text = keyboards[e.KeyPressEvent.DeviceHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.START] : "";
-
 
                 inputBox_LSUP.Text = keyboards[e.KeyPressEvent.DeviceHandle].binds.ContainsKey(ButtonEnum.LSUP) ? keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.LSUP] : "";
                 inputBox_LSDOWN.Text = keyboards[e.KeyPressEvent.DeviceHandle].binds.ContainsKey(ButtonEnum.LSDOWN) ? keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.LSDOWN] : "";
@@ -92,7 +95,7 @@ namespace RivalsKeyboardRedirector
 
                 LSAutorunBox.Checked = keyboards[e.KeyPressEvent.DeviceHandle].LSAutoRun;
                 LSAutorunBox.Checked = keyboards[e.KeyPressEvent.DeviceHandle].RSAutoRun;
-
+                */
                 detecting = false;
             }
             label14.Text = $"{e.KeyPressEvent.DeviceHandle.ToString()}_{e.KeyPressEvent.VKeyName}_{(e.KeyPressEvent.Message == 256 ? "PRESS" : "RELEASE") }";
@@ -493,6 +496,49 @@ namespace RivalsKeyboardRedirector
                 LSAutorunBox.Checked = false;
                 LSAutorunBox.CheckedChanged += LSAutorunBox_CheckedChanged;
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            currentHandle = (IntPtr)comboBox1.SelectedItem;
+            vJoyBox.CheckedChanged -= vJoyBox_CheckedChanged;
+            vJoyBox.Checked = keyboards[currentHandle].vJoyEnabled;
+            vJoyBox.CheckedChanged += vJoyBox_CheckedChanged;
+
+            LSAutorunBox.CheckedChanged -= LSAutorunBox_CheckedChanged;
+            LSAutorunBox.Checked = keyboards[currentHandle].LSAutoRun;
+            LSAutorunBox.CheckedChanged += LSAutorunBox_CheckedChanged;
+
+            //labelCurrentKb.Text = $"Current Keyboard: {currentHandle.ToString()}";
+
+            inputBox_A.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.A) ? keyboards[currentHandle].binds[ButtonEnum.A] : "";
+            inputBox_B.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.B) ? keyboards[currentHandle].binds[ButtonEnum.B] : "";
+            inputBox_X.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.X) ? keyboards[currentHandle].binds[ButtonEnum.X] : "";
+            inputBox_Y.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.Y] : "";
+            inputBox_L.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.L] : "";
+            inputBox_R.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.R] : "";
+            inputBox_Z.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.Z] : "";
+            inputBox_START.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.START] : "";
+
+
+            inputBox_LSUP.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.LSUP) ? keyboards[currentHandle].binds[ButtonEnum.LSUP] : "";
+            inputBox_LSDOWN.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.LSDOWN) ? keyboards[currentHandle].binds[ButtonEnum.LSDOWN] : "";
+            inputBox_LSLEFT.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.LSLEFT) ? keyboards[currentHandle].binds[ButtonEnum.LSLEFT] : "";
+            inputBox_LSRIGHT.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.LSRIGHT) ? keyboards[currentHandle].binds[ButtonEnum.LSRIGHT] : "";
+            inputBox_LSMOD.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.LSMOD) ? keyboards[currentHandle].binds[ButtonEnum.LSMOD] : "";
+
+            inputBox_RSUP.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.RSUP) ? keyboards[currentHandle].binds[ButtonEnum.RSUP] : "";
+            inputBox_RSDOWN.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.RSDOWN) ? keyboards[currentHandle].binds[ButtonEnum.RSDOWN] : "";
+            inputBox_RSLEFT.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.RSLEFT) ? keyboards[currentHandle].binds[ButtonEnum.RSLEFT] : "";
+            inputBox_RSRIGHT.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.RSRIGHT) ? keyboards[currentHandle].binds[ButtonEnum.RSRIGHT] : "";
+
+            inputBox_DUP.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.DUP) ? keyboards[currentHandle].binds[ButtonEnum.DUP] : "";
+            inputBox_DDOWN.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.DDOWN) ? keyboards[currentHandle].binds[ButtonEnum.DDOWN] : "";
+            inputBox_DLEFT.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.DLEFT) ? keyboards[currentHandle].binds[ButtonEnum.DLEFT] : "";
+            inputBox_DRIGHT.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.DRIGHT) ? keyboards[currentHandle].binds[ButtonEnum.DRIGHT] : "";
+
+            LSAutorunBox.Checked = keyboards[currentHandle].LSAutoRun;
+            LSAutorunBox.Checked = keyboards[currentHandle].RSAutoRun;
         }
     }
 }

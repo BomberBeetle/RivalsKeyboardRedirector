@@ -68,6 +68,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -84,17 +85,17 @@
             // 
             this.labelCurrentKb.AutoSize = true;
             this.labelCurrentKb.ForeColor = System.Drawing.Color.White;
-            this.labelCurrentKb.Location = new System.Drawing.Point(12, 23);
+            this.labelCurrentKb.Location = new System.Drawing.Point(13, 28);
             this.labelCurrentKb.Name = "labelCurrentKb";
-            this.labelCurrentKb.Size = new System.Drawing.Size(121, 13);
+            this.labelCurrentKb.Size = new System.Drawing.Size(92, 13);
             this.labelCurrentKb.TabIndex = 1;
-            this.labelCurrentKb.Text = "Current Keyboard: None";
+            this.labelCurrentKb.Text = "Current Keyboard:";
             // 
             // vJoyBox
             // 
             this.vJoyBox.AutoSize = true;
             this.vJoyBox.ForeColor = System.Drawing.Color.White;
-            this.vJoyBox.Location = new System.Drawing.Point(15, 48);
+            this.vJoyBox.Location = new System.Drawing.Point(15, 74);
             this.vJoyBox.Name = "vJoyBox";
             this.vJoyBox.Size = new System.Drawing.Size(223, 17);
             this.vJoyBox.TabIndex = 2;
@@ -452,12 +453,22 @@
             this.label15.TabIndex = 53;
             this.label15.Text = "Note: D-Pad Down does not exist due to it being used as the VIEW button.";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(117, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(231, 21);
+            this.comboBox1.TabIndex = 54;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(523, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.inputBox_START);
@@ -549,6 +560,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
