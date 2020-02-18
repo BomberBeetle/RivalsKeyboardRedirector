@@ -103,92 +103,92 @@ namespace RivalsKeyboardRedirector
             {
                 if(focusedBox == inputBox_LSUP)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.LSUP] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.LSUP] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_LSDOWN)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.LSDOWN] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.LSDOWN] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_LSLEFT)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.LSLEFT] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.LSLEFT] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_LSRIGHT)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.LSRIGHT] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.LSRIGHT] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_LSMOD)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.LSMOD] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.LSMOD] = e.KeyPressEvent.VKeyName;
                 }
 
                 else if (focusedBox == inputBox_RSUP)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.RSUP] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.RSUP] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_RSDOWN)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.RSDOWN] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.RSDOWN] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_RSLEFT)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.RSLEFT] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.RSLEFT] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_RSRIGHT)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.RSRIGHT] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.RSRIGHT] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_A)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.A] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.A] = e.KeyPressEvent.VKeyName;
                 }
 
                 else if (focusedBox == inputBox_B)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.B] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.B] = e.KeyPressEvent.VKeyName;
                 }
 
                 else if (focusedBox == inputBox_X)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.X] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.X] = e.KeyPressEvent.VKeyName;
                 }
 
                 else if (focusedBox == inputBox_Y)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.Y] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.Y] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_Z)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.Z] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.Z] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_L)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.L] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.L] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_R)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.R] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.R] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_START)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.START] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.START] = e.KeyPressEvent.VKeyName;
                 }
 
                 else if (focusedBox == inputBox_DUP)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.DUP] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.DUP] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_DDOWN)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.DDOWN] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.DDOWN] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_DLEFT)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.DLEFT] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.DLEFT] = e.KeyPressEvent.VKeyName;
                 }
                 else if (focusedBox == inputBox_DRIGHT)
                 {
-                    keyboards[e.KeyPressEvent.DeviceHandle].binds[ButtonEnum.DRIGHT] = e.KeyPressEvent.VKeyName;
+                    keyboards[currentHandle].binds[ButtonEnum.DRIGHT] = e.KeyPressEvent.VKeyName;
                 }
 
                 focusedBox.Text = e.KeyPressEvent.VKeyName;
