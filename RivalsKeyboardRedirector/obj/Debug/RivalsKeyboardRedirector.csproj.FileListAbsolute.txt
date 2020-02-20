@@ -1,0 +1,9 @@
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\bin\Debug\RivalsKeyboardRedirector.exe.config
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\obj\Debug\RivalsKeyboardRedirector.csprojResolveAssemblyReference.cache
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\obj\Debug\RivalsKeyboardRedirector.MainWindow.resources
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\obj\Debug\RivalsKeyboardRedirector.csproj.GenerateResource.Cache
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\bin\Debug\RivalsKeyboardRedirector.exe
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\bin\Debug\RivalsKeyboardRedirector.pdb
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\obj\Debug\RivalsKeyboardRedirector.Properties.Resources.resources
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\obj\Debug\RivalsKeyboardRedirector.exe
+C:\Users\Lab\Desktop\RivalsKeyboardRedirector-master\RivalsKeyboardRedirector\obj\Debug\RivalsKeyboardRedirector.pdb

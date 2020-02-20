@@ -515,10 +515,10 @@ namespace RivalsKeyboardRedirector
             inputBox_B.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.B) ? keyboards[currentHandle].binds[ButtonEnum.B] : "";
             inputBox_X.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.X) ? keyboards[currentHandle].binds[ButtonEnum.X] : "";
             inputBox_Y.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.Y] : "";
-            inputBox_L.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.L] : "";
-            inputBox_R.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.R] : "";
-            inputBox_Z.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.Z] : "";
-            inputBox_START.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Y) ? keyboards[currentHandle].binds[ButtonEnum.START] : "";
+            inputBox_L.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.L) ? keyboards[currentHandle].binds[ButtonEnum.L] : "";
+            inputBox_R.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.R) ? keyboards[currentHandle].binds[ButtonEnum.R] : "";
+            inputBox_Z.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.Z) ? keyboards[currentHandle].binds[ButtonEnum.Z] : "";
+            inputBox_START.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.START) ? keyboards[currentHandle].binds[ButtonEnum.START] : "";
 
 
             inputBox_LSUP.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.LSUP) ? keyboards[currentHandle].binds[ButtonEnum.LSUP] : "";
@@ -538,7 +538,6 @@ namespace RivalsKeyboardRedirector
             inputBox_DRIGHT.Text = keyboards[currentHandle].binds.ContainsKey(ButtonEnum.DRIGHT) ? keyboards[currentHandle].binds[ButtonEnum.DRIGHT] : "";
 
             LSAutorunBox.Checked = keyboards[currentHandle].LSAutoRun;
-            LSAutorunBox.Checked = keyboards[currentHandle].RSAutoRun;
         }
     }
 }
